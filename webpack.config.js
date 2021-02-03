@@ -1,4 +1,6 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -8,6 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
+  plugins: [
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new HtmlWebpackPlugin({
+      title: 'Alvin Lopez',
+    }),
+  ],
   module: {
     rules: [
       {
