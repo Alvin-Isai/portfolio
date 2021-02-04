@@ -18,14 +18,19 @@ const home = () => {
     const introPara = document.createElement('p');
     introPara.classList.add('introPara');
     introPara.innerHTML = "I'm a self taught junior web developer living in Portland, OR. Looking to be hired in front-end development."
+    const media = document.createElement('div');
+    media.classList.add('media');
+    media.innerHTML += '<a href="https://github.com/Alvin-Isai" target="_blank"><i class="fab fa-github-square"></i></a>'
+    media.innerHTML += '<a href="mailto:alvinlopez76@yahoo.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>'
     introDiv.appendChild(introHead);
     introDiv.appendChild(introPara);
+    introDiv.appendChild(media);
 
     // Append to intro section
     intro.appendChild(hidden);
     intro.appendChild(introDiv)
 
-    
+
     // About section
     const about = document.createElement('section');
     about.classList.add('aboutContainer');
@@ -63,7 +68,7 @@ const home = () => {
    languagesDiv.classList.add('languagesDiv');
    const languagesHead = document.createElement('h2');
    languagesHead.classList.add('languagesHead');
-   languagesHead.innerHTML = 'Languages';
+   languagesHead.innerHTML = 'Languages <i class="fa fa-code" aria-hidden="true"></i>';
    const languagesPara = document.createElement('p');
    languagesPara.classList.add('languagesPara');
    languagesPara.innerHTML = 'HTML5 <br> CSS3 <br> JavaScript <br> Ruby ';
@@ -74,7 +79,7 @@ const home = () => {
    toolsDiv.classList.add('toolsDiv');
    const toolsHead = document.createElement('h2');
    toolsHead.classList.add('toolsHead');
-   toolsHead.innerHTML = 'Tools';
+   toolsHead.innerHTML = 'Tools <i class="fa fa-code-branch" aria-hidden="true"></i>';
    const toolsPara = document.createElement('p');
    toolsPara.classList.add('toolsPara');
    toolsPara.innerHTML = 'Webpack <br> NPM <br> Terminal <br>Git & Github <br> Linux & Mac OS <br> Ruby on Rails';

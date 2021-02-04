@@ -41,6 +41,20 @@
     margin-top: 10px;
 }
 
+.fa-github-square, 
+.fa-envelope {
+    margin-top: 10px;
+    margin-right: 20px;
+    color: white;
+    font-size: 25px;
+}
+
+.fa-github-square:hover,
+.fa-envelope:hover {
+    transform: scale(1.2);
+    transition: all .3s ease-in-out; 
+}
+
 
 /* About Me */
 .aboutContainer {
@@ -91,14 +105,14 @@
 
 .languages {
     width: 50%;
-    margin: 50px auto;
+    margin: 90px auto;
     display: flex;
     justify-content: space-around;
     text-align: center;
 }
 
 .languagesHead, .toolsHead {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -113,3 +127,15 @@
     font-style: italic;
 }
 
+.fa-code,
+.fa-code-branch{
+    color: #1A87F0;
+    font-size: 30px;
+}
+
+.fa-code:hover,
+.fa-code-branch:hover {
+    transform: scale(1.2);
+    transition: all .3s ease-in-out; 
+
+}
