@@ -34,16 +34,17 @@ const home = () => {
     aboutDiv.classList.add('aboutDiv');
     const aboutHead = document.createElement('h2');
     aboutHead.classList.add('aboutHead');
-    aboutHead.innerHTML = 'About Me:'
+    aboutHead.innerHTML = 'About Me'
     const aboutPara = document.createElement('p');
     aboutPara.classList.add('aboutPara');
-    aboutPara.innerHTML = 'FIller text here';
+    aboutPara.innerHTML = 'I’m a self taught web developer looking for jobs in front-end development. I currently live in the Portland area.<br><br> I began learning in early April of 2020 when COVID-19 closed down the restaurant I was working at. Since then I have dedicated the majority of my time in learning how to become a professional web developer.<br><br> The beginning of the learning process was difficult and there were many times I wanted to quit. The feeling of finally solving a problem and seeing my finished projects kept me going and as I kept learning more and more I realized my passion for web development.<br><br> Now my goal is to work in a professional setting and learn more about proper industry techniques and becoming a better developer. I hope to be in contact soon! ';
     aboutDiv.appendChild(aboutHead);
     aboutDiv.appendChild(aboutPara);
 
     const imgDiv = document.createElement('div')
     imgDiv.classList.add('imgDiv');
     const image = new Image();
+    image.classList.add('portland');
     image.src = Portland;
     image.alt = 'Portland sign'
     imgDiv.appendChild(image);
@@ -51,11 +52,45 @@ const home = () => {
     // Append to about section
     about.appendChild(aboutDiv);
     about.appendChild(imgDiv);
+
+    
+    // Languages and tools
+    
+   const languages = document.createElement('section');
+   languages.classList.add('languages');
+
+   const languagesDiv = document.createElement('div');
+   languagesDiv.classList.add('languagesDiv');
+   const languagesHead = document.createElement('h2');
+   languagesHead.classList.add('languagesHead');
+   languagesHead.innerHTML = 'Languages';
+   const languagesPara = document.createElement('p');
+   languagesPara.classList.add('languagesPara');
+   languagesPara.innerHTML = 'HTML5 <br> CSS3 <br> JavaScript <br> Ruby ';
+   languagesDiv.appendChild(languagesHead);
+   languagesDiv.appendChild(languagesPara);
+
+   const toolsDiv = document.createElement('div');
+   toolsDiv.classList.add('toolsDiv');
+   const toolsHead = document.createElement('h2');
+   toolsHead.classList.add('toolsHead');
+   toolsHead.innerHTML = 'Tools';
+   const toolsPara = document.createElement('p');
+   toolsPara.classList.add('toolsPara');
+   toolsPara.innerHTML = 'Webpack <br> NPM <br> Terminal <br>Git & Github <br> Linux & Mac OS <br> Ruby on Rails';
+   toolsDiv.appendChild(toolsHead);
+   toolsDiv.appendChild(toolsPara);
+
    
+    // Append to languages section
+   languages.appendChild(languagesDiv);
+   languages.appendChild(toolsDiv);
+
 
     // When function is called appends elements to DOM
     document.body.appendChild(intro);
     document.body.appendChild(about);
+    document.body.appendChild(languages);
 };
 
 export default home

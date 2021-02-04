@@ -1,0 +1,115 @@
+/* Introduction */
+.introContainer {
+    display: flex;
+    margin: 0 auto;
+    background: no-repeat center 100% url('./hero1.jpeg');
+    max-width: 1300px;
+    height: 700px;
+}
+
+.introDiv {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: fadeInAnimation;
+    animation-duration: 3s;
+}
+
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+
+.introHead {
+    font-size: 65px;
+    font-weight: 700;
+    width: 50%;
+}
+
+.introPara {
+    font-size: 25px;
+    width: 50%;
+    margin-top: 10px;
+}
+
+
+/* About Me */
+.aboutContainer {
+    width: 50%;
+    height: 900px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutDiv::before,
+.imgDiv::after  {
+    display: block;
+    content: "";
+    border: 3px solid #1A87F0;
+    width: 200px;
+    margin: 20px auto;
+}
+.aboutDiv {
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.aboutHead {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aboutPara {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.imgDiv {
+    width: 50%;
+}
+
+.portland {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Languages and Tools */
+
+.languages {
+    width: 50%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.languagesHead, .toolsHead {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.languagesDiv, .toolsDiv {
+    width: 100%;
+    height: 100%;
+}
+
+.languagesPara, .toolsPara {
+    font-size: 17px;
+    font-style: italic;
+}
+
