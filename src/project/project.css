@@ -1,0 +1,82 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectHead {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.project {
+    width: 100%;
+    height: 700px;
+    margin-top: 30px;
+}
+
+.projectImg {
+    border: .5px solid gray;
+    max-width: 970px;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.projectCaption {
+    max-width: 970px;
+    height: 10%;
+    margin: 0 auto;
+}
+
+.captionHead {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.captionPara {
+    font-size: 17px;
+    font-style: italic;
+}
+
+
+/* Gets set when user hovers over project element */
+.overlay {
+    background: rgba(0,0,0,0.8);
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    
+}
+
+.site,
+.git {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 20px;
+
+}
+
+.siteLink,
+.gitLink {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.siteLink:hover,
+.gitLink:hover {
+    transform: scale(1.2);
+    transition: all .3s ease-in-out; 
+}
+

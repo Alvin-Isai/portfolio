@@ -20,8 +20,8 @@ const home = () => {
     introPara.innerHTML = "I'm a self taught junior web developer living in Portland, OR. Looking to be hired in front-end development."
     const media = document.createElement('div');
     media.classList.add('media');
-    media.innerHTML += '<a href="https://github.com/Alvin-Isai" target="_blank"><i class="fab fa-github-square"></i></a>'
-    media.innerHTML += '<a href="mailto:alvinlopez76@yahoo.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>'
+    media.innerHTML += '<a href="https://github.com/Alvin-Isai" target="_blank"><i class="fab fa-github-square gitHome"></i></a>'
+    media.innerHTML += '<a href="mailto:alvinlopez76@yahoo.com"><i class="fa fa-envelope email" aria-hidden="true"></i></a>'
     introDiv.appendChild(introHead);
     introDiv.appendChild(introPara);
     introDiv.appendChild(media);

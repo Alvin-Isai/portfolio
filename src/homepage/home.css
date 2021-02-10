@@ -41,16 +41,16 @@
     margin-top: 10px;
 }
 
-.fa-github-square, 
-.fa-envelope {
+.gitHome, 
+.email {
     margin-top: 10px;
     margin-right: 20px;
     color: white;
     font-size: 25px;
 }
 
-.fa-github-square:hover,
-.fa-envelope:hover {
+.gitHome:hover,
+.email:hover {
     transform: scale(1.2);
     transition: all .3s ease-in-out; 
 }
