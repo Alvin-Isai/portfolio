@@ -1,5 +1,6 @@
 import home from'./homepage/home.js';
 import nav from './navbar/nav.js';
+import footer from './footer/footer.js';
 import project from './project/project.js';
 import contact from './contact/contact.js';
 import './global_styles/hidden.css';
@@ -17,3 +18,5 @@ nav();
 // document.body.appendChild(project());
 
 document.body.appendChild(contact());
+
+footer();
