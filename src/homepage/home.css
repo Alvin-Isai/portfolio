@@ -105,7 +105,8 @@
 
 .languages {
     width: 50%;
-    margin: 90px auto;
+    height: 300px;
+    margin: 90px auto 0;
     display: flex;
     justify-content: space-around;
     text-align: center;
