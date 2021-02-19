@@ -2,7 +2,7 @@ import './contact.css';
 
 const contact = () => {
     const content = document.createElement('div');
-    content.classList.add('content');
+    content.classList.add('contactContainer');
 
     const hidden = document.createElement('h1');
     hidden.classList.add('hidden');
