@@ -100,11 +100,10 @@ const contact = () => {
     status.id = 'test'
     form.append(status);
 
-
     return content;
 };
 
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener('change', function() {
     
     var form = document.querySelector(".myForm");
     var status = document.querySelector(".status");
@@ -136,8 +135,8 @@ window.addEventListener("DOMContentLoaded", function() {
       ev.preventDefault();
       var data = new FormData(form);
       ajax(form.method, form.action, data, success, error);
+      });
     });
-  });
   
   // helper function for sending an AJAX request
   function ajax(method, url, data, success, error) {
