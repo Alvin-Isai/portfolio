@@ -1,7 +1,10 @@
-import Portland from './portland.jpg'
-import './home.css'
+import Portland from './portland.jpg';
+import './home.css';
 
 const home = () => {
+    const content = document.createElement('div');
+    content.classList.add('homeContent');
+    
     // Intro section
     const intro = document.createElement('section');
     intro.classList.add('introContainer');
@@ -61,41 +64,42 @@ const home = () => {
     
     // Languages and tools
     
-   const languages = document.createElement('section');
-   languages.classList.add('languages');
+    const languages = document.createElement('section');
+    languages.classList.add('languages');
 
-   const languagesDiv = document.createElement('div');
-   languagesDiv.classList.add('languagesDiv');
-   const languagesHead = document.createElement('h2');
-   languagesHead.classList.add('languagesHead');
-   languagesHead.innerHTML = 'Languages <i class="fa fa-code" aria-hidden="true"></i>';
-   const languagesPara = document.createElement('p');
-   languagesPara.classList.add('languagesPara');
-   languagesPara.innerHTML = 'HTML5 <br> CSS3 <br> JavaScript <br> Ruby ';
-   languagesDiv.appendChild(languagesHead);
-   languagesDiv.appendChild(languagesPara);
+    const languagesDiv = document.createElement('div');
+    languagesDiv.classList.add('languagesDiv');
+    const languagesHead = document.createElement('h2');
+    languagesHead.classList.add('languagesHead');
+    languagesHead.innerHTML = 'Languages <i class="fa fa-code" aria-hidden="true"></i>';
+    const languagesPara = document.createElement('p');
+    languagesPara.classList.add('languagesPara');
+    languagesPara.innerHTML = 'HTML5 <br> CSS3 <br> JavaScript <br> Ruby ';
+    languagesDiv.appendChild(languagesHead);
+    languagesDiv.appendChild(languagesPara);
 
-   const toolsDiv = document.createElement('div');
-   toolsDiv.classList.add('toolsDiv');
-   const toolsHead = document.createElement('h2');
-   toolsHead.classList.add('toolsHead');
-   toolsHead.innerHTML = 'Tools <i class="fa fa-code-branch" aria-hidden="true"></i>';
-   const toolsPara = document.createElement('p');
-   toolsPara.classList.add('toolsPara');
-   toolsPara.innerHTML = 'Webpack <br> NPM <br> Terminal <br>Git & Github <br> Linux & Mac OS <br> Ruby on Rails';
-   toolsDiv.appendChild(toolsHead);
-   toolsDiv.appendChild(toolsPara);
+    const toolsDiv = document.createElement('div');
+    toolsDiv.classList.add('toolsDiv');
+    const toolsHead = document.createElement('h2');
+    toolsHead.classList.add('toolsHead');
+    toolsHead.innerHTML = 'Tools <i class="fa fa-code-branch" aria-hidden="true"></i>';
+    const toolsPara = document.createElement('p');
+    toolsPara.classList.add('toolsPara');
+    toolsPara.innerHTML = 'Webpack <br> NPM <br> Terminal <br>Git & Github <br> Linux & Mac OS <br> Ruby on Rails';
+    toolsDiv.appendChild(toolsHead);
+    toolsDiv.appendChild(toolsPara);
 
-   
-    // Append to languages section
-   languages.appendChild(languagesDiv);
-   languages.appendChild(toolsDiv);
+    
+        // Append to languages section
+    languages.appendChild(languagesDiv);
+    languages.appendChild(toolsDiv);
 
 
-    // When function is called appends elements to DOM
-    document.body.appendChild(intro);
-    document.body.appendChild(about);
-    document.body.appendChild(languages);
+    content.appendChild(intro);
+    content.appendChild(about);
+    content.appendChild(languages);
+
+    return content;
 };
 
-export default home
+export default home;

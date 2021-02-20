@@ -14,10 +14,13 @@ const nav = () => {
     const navUl = document.createElement('ul');
     navLinks.appendChild(navUl);
     const link1 = document.createElement('li');
+    link1.id = 'home';
     link1.innerHTML = 'Home';
     const link2 = document.createElement('li');
+    link2.id = 'project';
     link2.innerHTML = 'Projects';
     const link3 = document.createElement('li');
+    link3.id = 'contact';
     link3.innerHTML = 'Contact Me';
     navUl.appendChild(link1);
     navUl.appendChild(link2);
