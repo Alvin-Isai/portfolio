@@ -1,5 +1,7 @@
 import Portland from './portland.jpg';
 import './home.css';
+import './home_media.css';
+
 
 const home = () => {
     const content = document.createElement('div');
@@ -17,7 +19,7 @@ const home = () => {
     introDiv.classList.add('introDiv');
     const introHead = document.createElement('h2');
     introHead.classList.add('introHead');
-    introHead.innerHTML = 'Welcome! My name is Alvin Lopez.';
+    introHead.innerHTML = 'Welcome! My name is <br> Alvin Lopez.';
     const introPara = document.createElement('p');
     introPara.classList.add('introPara');
     introPara.innerHTML = "I'm a self taught junior web developer living in Portland, OR. Looking to be hired in front-end development."
@@ -71,7 +73,7 @@ const home = () => {
     languagesDiv.classList.add('languagesDiv');
     const languagesHead = document.createElement('h2');
     languagesHead.classList.add('languagesHead');
-    languagesHead.innerHTML = 'Languages <i class="fa fa-code" aria-hidden="true"></i>';
+    languagesHead.innerHTML = 'Languages <br> <i class="fa fa-code" aria-hidden="true"></i>';
     const languagesPara = document.createElement('p');
     languagesPara.classList.add('languagesPara');
     languagesPara.innerHTML = 'HTML5 <br> CSS3 <br> JavaScript <br> Ruby ';
@@ -82,7 +84,7 @@ const home = () => {
     toolsDiv.classList.add('toolsDiv');
     const toolsHead = document.createElement('h2');
     toolsHead.classList.add('toolsHead');
-    toolsHead.innerHTML = 'Tools <i class="fa fa-code-branch" aria-hidden="true"></i>';
+    toolsHead.innerHTML = 'Tools <br> <i class="fa fa-code-branch" aria-hidden="true"></i>';
     const toolsPara = document.createElement('p');
     toolsPara.classList.add('toolsPara');
     toolsPara.innerHTML = 'Webpack <br> NPM <br> Terminal <br>Git & Github <br> Linux & Mac OS <br> Ruby on Rails';

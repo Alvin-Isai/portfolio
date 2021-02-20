@@ -1,0 +1,78 @@
+@media screen and (max-width: 1600px) {
+    .introHead {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .introPara {
+        width: 47%;
+    }
+    
+    .aboutDiv {
+        width: 100%;
+    }
+    .imgDiv {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .introHead {
+        width: 75%;
+        font-size: 60px;
+    }
+
+    .introPara {
+        width: 55%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introPara {
+        width: 75%;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .introHead {
+        font-size: 50px;
+    }
+    .aboutContainer {
+        width: 75%;
+    }
+
+    .languages {
+        width: 100%;
+    }
+
+    .languagesHead,
+    .toolsHead {
+        font-size: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .introHead {
+        font-size: 40px;
+    }
+
+    .introPara {
+        font-size: 20px;
+    }
+
+    .aboutPara {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .aboutContainer {
+        width: 100%;
+        height: 1100px;
+    }
+}
