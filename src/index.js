@@ -25,29 +25,45 @@ const switchTabs = (() => {
     container.appendChild(home());
 
     const homeBut = document.getElementById('home');
+    const mobileHome = document.getElementById('mobileHome');
     const projectBut = document.getElementById('project');
+    const mobileProject = document.getElementById('mobileProject');
     const contactBut = document.getElementById('contact');
+    const mobileContact = document.getElementById('mobileContact');
+    const mobileNav = document.querySelector('.mobileNav');
+    
+    [ homeBut, mobileHome ].forEach(function(element) {
+        element.addEventListener('click', () => {
+            while (container.firstChild) {
+                container.removeChild(container.firstChild)
+            };
+            container.appendChild(home());
+            mobileNav.classList.toggle('open');
+            document.body.classList.toggle('open');
+        });
+     });
 
-    // Removes current page and appends new page
-    homeBut.addEventListener('click', () => {
-        while (container.firstChild) {
-            container.removeChild(container.firstChild)
-        };
-        container.appendChild(home());
+    [ projectBut, mobileProject ].forEach(function(element) {
+        element.addEventListener('click', () => {
+            while (container.firstChild) {
+                container.removeChild(container.firstChild)
+            };
+            container.appendChild(project());
+            mobileNav.classList.toggle('open');
+            document.body.classList.toggle('open');
+
+        });
     });
-
-    projectBut.addEventListener('click', () => {
-        while (container.firstChild) {
-            container.removeChild(container.firstChild)
-        };
-        container.appendChild(project());
-    });
-
-    contactBut.addEventListener('click', () => {
-        while (container.firstChild) {
-            container.removeChild(container.firstChild)
-        };
-        container.appendChild(contact());
+    
+    [ contactBut, mobileContact ].forEach(function(element) {
+        element.addEventListener('click', () => {
+            while (container.firstChild) {
+                container.removeChild(container.firstChild)
+            };
+            container.appendChild(contact());
+            mobileNav.classList.toggle('open');
+            document.body.classList.toggle('open');
+        });
     });
 
 })();

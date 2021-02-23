@@ -1,0 +1,116 @@
+@media screen and (max-width: 600px) {
+    .navBar {
+        color: #1A87F0;
+        background-color: rgba(0,0,0,0);
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .navHeader {
+        font-size: 20px;
+        z-index: 1;
+    }
+
+    .navLinks {
+        display: none;
+    }
+  
+
+    .scroll {
+        background-color: #fff !important;
+        color: black;
+        transition: background-color 200ms linear;
+    }
+
+    .mobileNav {
+        display: block;
+    }
+    
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .hamburger span {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        height: 2px;
+        width: 100%;
+        border-radius: 9px;
+        background: #1A87F0;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0px;
+    }
+      
+    .hamburger span:nth-child(2) {
+        top: 7px;
+    }
+    
+    .hamburger span:nth-child(3) {
+        top: 15px;
+    }
+    
+    .open .hamburger span:nth-child(1) {
+        top: 10px;
+        transform: rotate(135deg);
+    }
+    
+    .open .hamburger span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    
+    .open .hamburger span:nth-child(3) {
+        top: 10px;
+        transform: rotate(-135deg);
+    }
+
+    .mobileContainer {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        right: -3000px;
+        background: rgba(0,0,0,1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 50px;
+        transition: right .4s cubic-bezier(1,0 , 0, 1);
+    }
+    .mobileContainer #mobileHome,
+    .mobileContainer #mobileProject,
+    .mobileContainer #mobileContact {
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    .open .mobileContainer{
+        right: 0;
+    }
+    body.open {
+        overflow-y: hidden;
+    }
+}
+/* 
+@media screen and (max-width: 400px) {
+    .navHeader {
+        font-size: 10px;
+    }
+} */
