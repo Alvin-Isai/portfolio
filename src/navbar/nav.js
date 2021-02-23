@@ -85,7 +85,7 @@ const nav = () => {
     // For mobile only, turns navbar to different color on scroll 
     window.onscroll = function() {
         "use strict";
-        if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+        if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
           nav.classList.add("scroll");
         } else {
           nav.classList.remove("scroll");

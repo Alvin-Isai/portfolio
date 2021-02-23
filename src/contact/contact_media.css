@@ -1,0 +1,74 @@
+@media screen and (max-width: 1024px) {
+    .para {
+        font-size: 60px;
+    }
+
+    .myContact {
+        margin-top: 0px;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .contactContainer {
+        height: 100%;
+    }
+
+    .myContact {
+        flex-direction: column;
+    }
+
+    .paraDiv {
+        margin-top: 30px;
+        width: 50%;
+    }
+
+    .infoDiv {
+        width: 50%;
+    }
+
+    .myInfo {
+        font-size: 18px;
+        padding: 30px 0;
+    }
+
+    .myForm {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .contactContainer {
+        margin-top: 10vh;
+
+    }
+    .paraDiv {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .para {
+        font-size: 52px;
+    }
+
+    .infoDiv {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .para {
+        font-size: 45px;
+    }
+    .myInfo {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .para {
+        font-size: 40px;
+    }
+    .myInfo {
+        font-size: 14px;
+    }
+}

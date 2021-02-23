@@ -1,4 +1,5 @@
 import './contact.css';
+import './contact_media.css';
 
 const contact = () => {
     const content = document.createElement('div');
