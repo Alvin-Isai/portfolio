@@ -1,4 +1,5 @@
 import './project.css';
+import './project_media.css';
 import restaurant from './pics/restaurant.png';
 import etch from './pics/etch.png';
 import facebook from './pics/facebook.png';
@@ -41,8 +42,12 @@ const createProject = (title, summary, background) => {
 
 
     const projectImg = document.createElement('div');
-    projectImg.style.background = `url(${background})center no-repeat`;
+    projectImg.style.background = `url(${background}) no-repeat center`;
     projectImg.classList.add('projectImg');
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    projectImg.appendChild(overlay);
 
     const projectCaption = document.createElement('div');
     projectCaption.classList.add('projectCaption');
@@ -55,27 +60,25 @@ const createProject = (title, summary, background) => {
     projectCaption.appendChild(captionHead);
     projectCaption.appendChild(captionPara);
 
-
+    
     project.appendChild(projectImg);
     project.appendChild(projectCaption);
 
-    return {project, projectImg};
+    return {project, projectImg, overlay};
 };
 
 // Addes overlay class to project element and sets links for each icon
 const addOverlay = (project, siteLink, gitLink) => {
+    const links = createLinks(siteLink, gitLink);
+    project.overlay.appendChild(links);
+
+    // Shows overlay on hover
     project.projectImg.addEventListener('mouseenter', () => {
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        project.projectImg.appendChild(overlay);
-
-        const links = createLinks(siteLink, gitLink);
-        overlay.appendChild(links);
-
-        // Removes overlay class when mouse leaves project element
-        project.projectImg.addEventListener('mouseleave', () => {
-            project.projectImg.removeChild(overlay);
-        });
+        project.overlay.classList.add('show');
+    });
+    // Removes overlay class when mouse leaves project element
+    project.projectImg.addEventListener('mouseleave', () => {
+        project.overlay.classList.remove('show');
     });
 };
 
@@ -89,22 +92,22 @@ const project = () => {
     projectHead.innerHTML = 'Projects that I have created.';
     content.appendChild(projectHead);
 
-    const project1 = createProject('A Facebook Clone', 'I made a full stack Facebook clone using HTML, Ruby on Rails, Bulma, Facebook API', facebook);
+    const project1 = createProject('A Facebook Clone', 'I made a full stack Facebook clone using HTML, JavaScript, Ruby on Rails, Bulma.', facebook);
     addOverlay(project1, 'https://sleepy-spire-74355.herokuapp.com/', 'https://github.com/Alvin-Isai/odin-facebook');
 
-    const project2 = createProject('A Restaurant Page', 'I made a responsive restaurant page using HTML, CSS, JavaScript and Webpack', restaurant);
+    const project2 = createProject('A Restaurant Page', 'I made a responsive restaurant page using HTML, CSS, JavaScript and Webpack.', restaurant);
     addOverlay(project2, 'https://alvin-isai.github.io/restaurant-page/', 'https://github.com/Alvin-Isai/restaurant-page');
 
-    const project3 = createProject('A New York Times clone', 'I made a clone of a NYT news article using HTML, css, where I learned how to use css grid', nyt);
+    const project3 = createProject('A New York Times clone', 'I made a clone of a NYT news article using HTML, CSS, where I learned how to use CSS grid.', nyt);
     addOverlay(project3, 'https://alvin-isai.github.io/NYT-clone/', 'https://github.com/Alvin-Isai/NYT-clone');
 
-    const project4 = createProject('Tic-Tac-Toe ', 'A game of tic-tac-toe using HTML, CSS, and JavaScript', ttt);
+    const project4 = createProject('Tic-Tac-Toe ', 'A game of tic-tac-toe using HTML, CSS, and JavaScript.', ttt);
     addOverlay(project4, 'https://alvin-isai.github.io/tic-tac-toe/', 'https://github.com/Alvin-Isai/tic-tac-toe');
 
-    const project5 = createProject('Rock-Paper-Scissors', 'A game of rock paper scissors, using HTML, CSS, and JavaScript', rps);
+    const project5 = createProject('Rock-Paper-Scissors', 'A game of rock paper scissors, using HTML, CSS, and JavaScript.', rps);
     addOverlay(project5, 'https://alvin-isai.github.io/rock-paper-scissor/', 'https://github.com/Alvin-Isai/rock-paper-scissor');
 
-    const project6 = createProject('Etch-a-Sketch', 'A simple Etch-a-Sketch on the web using, HTML, CSS, JavaScript', etch);
+    const project6 = createProject('Etch-a-Sketch', 'A simple Etch-a-Sketch on the web using, HTML, CSS, JavaScript.', etch);
     addOverlay(project6, 'https://alvin-isai.github.io/', 'https://github.com/Alvin-Isai/etch-a-sketch');
 
     content.appendChild(project1.project);
@@ -113,7 +116,6 @@ const project = () => {
     content.appendChild(project4.project);
     content.appendChild(project5.project);
     content.appendChild(project6.project);
-
 
     return content;
 };

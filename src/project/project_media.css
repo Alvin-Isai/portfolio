@@ -1,0 +1,88 @@
+@media screen and (max-width: 780px) {
+    .project {
+        height: 500px;
+    }
+    .projectImg {
+        width: 85%;
+        height: 389px;
+        background-size: contain !important;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+
+    .projectCaption {
+        width: 85%;
+    }
+
+    .overlay {
+        display: flex;
+        width: 55%;
+        height: 55%;
+        background: rgba(0,0,0,0.6);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        margin-top: 10vh;
+    }
+    .project {
+        height: 340px;
+    }
+    .projectHead {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    .projectImg {
+        width: 90%;
+        height: 90%;
+        border: none;
+    }
+    .projectCaption {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project {
+        height: 300px;
+    }
+    .projectHead {
+        font-size: 29px;
+        margin-top: 20px;
+    }
+    .projectImg {
+        width: 90%;
+        height: 200px;
+    }
+    .projectCaption {
+        width: 90%;
+    }
+    .caption {
+        font-size: 15px;
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .project {
+        height: 280px;
+    }
+    .projectHead {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .projectImg {
+        width: 90%;
+        height: 175px;
+    }
+    .projectCaption {
+        width: 90%;
+    }
+    .caption {
+        font-size: 9px;
+    }
+    
+}
