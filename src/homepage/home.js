@@ -27,6 +27,8 @@ const home = () => {
     media.classList.add('media');
     media.innerHTML += '<a href="https://github.com/Alvin-Isai" target="_blank"><i class="fab fa-github-square gitHome"></i></a>'
     media.innerHTML += '<a href="mailto:alvinlopez76@yahoo.com"><i class="fa fa-envelope email" aria-hidden="true"></i></a>'
+    media.innerHTML += '<a href="https://docs.google.com/document/d/1cyGENANs2Jqen7X-RpNYcd5FYv-Jpiwnug6IA-r7pKc/edit?usp=sharing" target="_blank"><i class="fas fa-file resume"></i></a>';
+
     introDiv.appendChild(introHead);
     introDiv.appendChild(introPara);
     introDiv.appendChild(media);

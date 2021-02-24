@@ -42,15 +42,17 @@
 }
 
 .gitHome, 
-.email {
+.email,
+.resume {
     margin-top: 10px;
     margin-right: 20px;
     color: white;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .gitHome:hover,
-.email:hover {
+.email:hover,
+.resume:hover {
     transform: scale(1.2);
     transition: all .3s ease-in-out; 
 }
