@@ -1,4 +1,10 @@
 import './project.css';
+import restaurant from './pics/restaurant.png';
+import etch from './pics/etch.png';
+import facebook from './pics/facebook.png';
+import nyt from './pics/nyt.png';
+import rps from './pics/rps.png';
+import ttt from './pics/tic-tac-toe.png';
 
 // Creates HTML for each website link and github link icons
 const createLinks = (siteLink, gitLink) => {
@@ -35,7 +41,7 @@ const createProject = (title, summary, background) => {
 
 
     const projectImg = document.createElement('div');
-    projectImg.style.background = `url(${background}) no-repeat center`;
+    projectImg.style.background = `url(${background})center no-repeat`;
     projectImg.classList.add('projectImg');
 
     const projectCaption = document.createElement('div');
@@ -83,10 +89,31 @@ const project = () => {
     projectHead.innerHTML = 'Projects that I have created.';
     content.appendChild(projectHead);
 
-    // const project1 = createProject('A Facebook Clone', 'I made a facebook clone using HTML, Bulma, Ruby on Rails, Facebook API', facebook);
-    // addOverlay(project1, 'https://sleepy-spire-74355.herokuapp.com/', 'https://github.com/Alvin-Isai/odin-facebook');
+    const project1 = createProject('A Facebook Clone', 'I made a full stack Facebook clone using HTML, Ruby on Rails, Bulma, Facebook API', facebook);
+    addOverlay(project1, 'https://sleepy-spire-74355.herokuapp.com/', 'https://github.com/Alvin-Isai/odin-facebook');
 
-    // content.appendChild(project1.project);
+    const project2 = createProject('A Restaurant Page', 'I made a responsive restaurant page using HTML, CSS, JavaScript and Webpack', restaurant);
+    addOverlay(project2, 'https://alvin-isai.github.io/restaurant-page/', 'https://github.com/Alvin-Isai/restaurant-page');
+
+    const project3 = createProject('A New York Times clone', 'I made a clone of a NYT news article using HTML, css, where I learned how to use css grid', nyt);
+    addOverlay(project3, 'https://alvin-isai.github.io/NYT-clone/', 'https://github.com/Alvin-Isai/NYT-clone');
+
+    const project4 = createProject('Tic-Tac-Toe ', 'A game of tic-tac-toe using HTML, CSS, and JavaScript', ttt);
+    addOverlay(project4, 'https://alvin-isai.github.io/tic-tac-toe/', 'https://github.com/Alvin-Isai/tic-tac-toe');
+
+    const project5 = createProject('Rock-Paper-Scissors', 'A game of rock paper scissors, using HTML, CSS, and JavaScript', rps);
+    addOverlay(project5, 'https://alvin-isai.github.io/rock-paper-scissor/', 'https://github.com/Alvin-Isai/rock-paper-scissor');
+
+    const project6 = createProject('Etch-a-Sketch', 'A simple Etch-a-Sketch on the web using, HTML, CSS, JavaScript', etch);
+    addOverlay(project6, 'https://alvin-isai.github.io/', 'https://github.com/Alvin-Isai/etch-a-sketch');
+
+    content.appendChild(project1.project);
+    content.appendChild(project2.project);
+    content.appendChild(project3.project);
+    content.appendChild(project4.project);
+    content.appendChild(project5.project);
+    content.appendChild(project6.project);
+
 
     return content;
 };
