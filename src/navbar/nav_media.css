@@ -20,7 +20,7 @@
 
     .scroll {
         background-color: #fff !important;
-        color: black;
+        color: #1A87F0;
         transition: background-color 200ms linear;
     }
 
